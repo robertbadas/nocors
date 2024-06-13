@@ -38,7 +38,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	var u, _ = url.Parse(targetURL)
-	log.Printf(targetURL)
 	proxy := httputil.NewSingleHostReverseProxy(u)
 
 	r.URL.Host = u.Host
